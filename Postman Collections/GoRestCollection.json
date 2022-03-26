@@ -1,0 +1,391 @@
+{
+  "info": {
+    "_postman_id": "ec888b1b-ea41-4bb5-a32f-05088b2e7b1e",
+    "name": "Go Rest API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Criar Usuarios",
+          "item": [
+            {
+              "name": "Criar usuario",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "3dc8c447-46fd-466a-ab6e-ea850d19a690",
+                    "exec": [
+                      "pm.iterationData.get(\"first_name_user\")\r",
+                      "pm.iterationData.get(\"gender_user\")\r",
+                      "pm.iterationData.get(\"email_user\")\r",
+                      "pm.iterationData.get(\"status_user\")"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "69b2668f-6de1-469a-bfc4-72677fc8c825",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"{{first_name_user}}\",\n    \"gender\": \"{{gender_user}}\",\n    \"email\": \"{{email_user}}\",\n    \"status\": \"{{status_user}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://gorest.co.in/public/v2/users"
+              },
+              "response": []
+            },
+            {
+              "name": "Detalhes de Usuario",
+              "_postman_id": "fff340ca-fa70-4b98-aa82-051837423017",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://gorest.co.in/public/v2/users/"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "cadec260-0441-4fec-b98a-e3f7a508a0b2",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Excluir Usuarios",
+          "item": [
+            {
+              "name": "Deletar Usuario",
+              "_postman_id": "2e97dbfb-fd1a-4e55-bff9-3462c3935f5c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://gorest.co.in/public/v2/users/4973"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "37bd603a-4deb-4798-b204-4b740db08023",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Alterar Usuarios",
+          "item": [
+            {
+              "name": "Alterar Usuario",
+              "_postman_id": "f75b3503-4dbc-44c6-a9a1-aacf2b8512b0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/users/4968"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "d2415471-dd90-450c-a0c8-edb75d588305",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "cd658fba-fb2f-4c4e-b1f5-957a037873aa"
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Criar Posts",
+          "item": [
+            {
+              "name": "Criar Post",
+              "_postman_id": "af46be67-718b-4c9b-80cb-e54115011540",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"id\": 2032,\n    \"user_id\": 4256,\n    \"title\": \"Corrumpo catena adicio vitiosus veritas admitto acceptus caste vir aut voluptatum decens pel audax sumptus titulus unus audentia optio.\",\n    \"body\": \"Qui suus comes. Thalassinus umerus cupiditas. Adsum vigor vir. Commodo spargo maiores. Adaugeo denego tam. Armo sono earum. Vicinus adhuc tabula. Stella tabesco pecus. Dedico curso cerno. Casso varietas patior. Cogito suscipio caecus. Sustineo theatrum tum. Arx abstergo tribuo. Approbo tondeo tergo. Carus cicuta consectetur. Triduana cavus aut. Depopulo facilis veritas.\"\n},",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://gorest.co.in/public/v2/posts"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "63fe9ae8-0dc1-4da0-a88c-6ab13f04620f",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Buscar Posts",
+          "item": [
+            {
+              "name": "Buscar Posts",
+              "_postman_id": "ec77ba4d-39a1-44a5-af1c-ef39ff191c9e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/posts"
+              },
+              "response": []
+            },
+            {
+              "name": "Busca Post Especifico",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "00e89c5c-3bf1-4210-9c8a-9bd0934f2db8",
+                    "exec": [
+                      "postman.setNextRequest(\"Excluir Comentarios\")"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "9777e5b9-76c6-4b63-88e5-a580522df1fe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/posts/2012"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "c09c0fba-7370-4dd9-9d2f-8fc31d3cf4d0",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Excluir Posts",
+          "item": [
+            {
+              "name": "Excluir Post",
+              "_postman_id": "a20ed9f8-1f23-406f-9d1f-1dbf077c4ddf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/posts/2012"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "4dbb3e99-0963-4635-9f06-b5b902af2498",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "1d4a0f8d-63e1-4ad4-8f09-b6ab6616fc5a"
+    },
+    {
+      "name": "Comentarios",
+      "item": [
+        {
+          "name": "Buscar Comentarios",
+          "item": [
+            {
+              "name": "Buscar Comentario",
+              "_postman_id": "25a9b856-1abc-4539-b24d-dfda1ba9f35c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/comments"
+              },
+              "response": []
+            },
+            {
+              "name": "Busca Comentario Especifico",
+              "_postman_id": "ff2cfb44-04eb-4694-b0ce-e4fb3850497f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/comments/{{id_comentario_busca}}"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "ceb7dc91-b86f-4c8a-8f08-38b807770bdf",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Criar Comentarios",
+          "item": [
+            {
+              "name": "Criar Comentario",
+              "_postman_id": "82104491-fc25-40cd-b133-4f3934e4389c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"id\": 2055,\n    \"post_id\": 2032,\n    \"name\": \"Divakar Namboothiri DC\",\n    \"email\": \"dc_namboothiri_divakar@kozey.org\",\n    \"body\": \"Voluptatem voluptate eaque. Facilis rerum deserunt.\"\n},\n{\n    \"id\": 2054,\n    \"post_id\": 2031,\n    \"name\": \"Vishwamitra Agarwal\",\n    \"email\": \"agarwal_vishwamitra@strosin.co\",\n    \"body\": \"Ut praesentium quod. Quas nesciunt in. Porro est laboriosam. Velit incidunt delectus.\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://gorest.co.in/public/v2/comments"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "6dc3dfac-f569-4cd6-abe3-b0156cb61910",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "Excluir Comentarios",
+          "item": [
+            {
+              "name": "Excluir Comentario",
+              "_postman_id": "70781b14-4cb8-4004-b8e6-f813a1914996",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "https://gorest.co.in/public/v2/comments/{{id_comment_delete}}"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "1a6e8892-1a56-4df4-abfd-f1b349a8d36e",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "493c9e16-5b2c-4180-a454-896984133c16"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "008257e01489e06c30a5d6f0b9d0ab7ea36b1e77defd9d46e82df1afd9276514"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "a111a8c9-431e-460e-8430-f97dd3bcd88f",
+        "type": "text/javascript",
+        "exec": [
+          "console.log(pm.info.requestName)"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "670cbff5-586d-454c-9e63-51c55dc6ec2a",
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Status code is 200 ou 201\", function () {",
+          "    pm.response.to.have.status(201);",
+          "});",
+          "",
+          "",
+          "pm.test(\"Response time is less than 2segundos\", function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(2000);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "f587cc83-3790-4b54-ad34-8f8b84cdde6b",
+      "key": "id_delete",
+      "value": "4302",
+      "type": "string"
+    },
+    {
+      "id": "2a6ebff0-ab0e-4f44-a182-5e8d45dc1a65",
+      "key": "id_update",
+      "value": "4248",
+      "type": "string"
+    },
+    {
+      "id": "25a4e851-1479-445c-89d8-01e40e7d1651",
+      "key": "id_post_busca",
+      "value": "2032",
+      "type": "string"
+    },
+    {
+      "id": "e3df56f6-e5f3-4ace-a3cd-5bfafa58c2d9",
+      "key": "id_post_dele",
+      "value": "4247",
+      "type": "string"
+    },
+    {
+      "id": "a247b802-6933-4026-ab72-3c68542845e7",
+      "key": "id_comentario_busca",
+      "value": "2042",
+      "type": "string"
+    },
+    {
+      "id": "1b0b8ab1-d2e1-44b6-bf85-b483df10bf10",
+      "key": "id_comment_delete",
+      "value": "2033",
+      "type": "string"
+    }
+  ]
+}
