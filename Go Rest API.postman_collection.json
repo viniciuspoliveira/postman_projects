@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "ec888b1b-ea41-4bb5-a32f-05088b2e7b1e",
+		"name": "Go Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Criar Usuarios",
+					"item": [
+						{
+							"name": "Criar usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Guilerme Marques\",\n    \"gender\": \"male\",\n    \"email\": \"guizim.ramakr2ishn1a@15ce.com\",\n    \"status\": \"active\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detalhes de Usuario",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users/4973",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users",
+										"4973"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir Usuarios",
+					"item": [
+						{
+							"name": "Deletar Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users/4973",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users",
+										"4973"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Alterar Usuarios",
+					"item": [
+						{
+							"name": "Alterar Usuario",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/users/4968",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"users",
+										"4968"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Criar Posts",
+					"item": [
+						{
+							"name": "Criar Post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2032,\n    \"user_id\": 4256,\n    \"title\": \"Corrumpo catena adicio vitiosus veritas admitto acceptus caste vir aut voluptatum decens pel audax sumptus titulus unus audentia optio.\",\n    \"body\": \"Qui suus comes. Thalassinus umerus cupiditas. Adsum vigor vir. Commodo spargo maiores. Adaugeo denego tam. Armo sono earum. Vicinus adhuc tabula. Stella tabesco pecus. Dedico curso cerno. Casso varietas patior. Cogito suscipio caecus. Sustineo theatrum tum. Arx abstergo tribuo. Approbo tondeo tergo. Carus cicuta consectetur. Triduana cavus aut. Depopulo facilis veritas.\"\n},",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/posts",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Buscar Posts",
+					"item": [
+						{
+							"name": "Buscar Posts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/posts",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Post Especifico",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"postman.setNextRequest(\"Excluir Comentarios\")"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/posts/2012",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"posts",
+										"2012"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir Posts",
+					"item": [
+						{
+							"name": "Excluir Post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/posts/2012",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"posts",
+										"2012"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comentarios",
+			"item": [
+				{
+					"name": "Buscar Comentarios",
+					"item": [
+						{
+							"name": "Buscar Comentario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/comments",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Comentario Especifico",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/comments/{{id_comentario_busca}}",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"comments",
+										"{{id_comentario_busca}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Criar Comentarios",
+					"item": [
+						{
+							"name": "Criar Comentario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2055,\n    \"post_id\": 2032,\n    \"name\": \"Divakar Namboothiri DC\",\n    \"email\": \"dc_namboothiri_divakar@kozey.org\",\n    \"body\": \"Voluptatem voluptate eaque. Facilis rerum deserunt.\"\n},\n{\n    \"id\": 2054,\n    \"post_id\": 2031,\n    \"name\": \"Vishwamitra Agarwal\",\n    \"email\": \"agarwal_vishwamitra@strosin.co\",\n    \"body\": \"Ut praesentium quod. Quas nesciunt in. Porro est laboriosam. Velit incidunt delectus.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/comments",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Excluir Comentarios",
+					"item": [
+						{
+							"name": "Excluir Comentario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://gorest.co.in/public/v2/comments/{{id_comment_delete}}",
+									"protocol": "https",
+									"host": [
+										"gorest",
+										"co",
+										"in"
+									],
+									"path": [
+										"public",
+										"v2",
+										"comments",
+										"{{id_comment_delete}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "008257e01489e06c30a5d6f0b9d0ab7ea36b1e77defd9d46e82df1afd9276514",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(pm.info.requestName)"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200 ou 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"});",
+					"",
+					"",
+					"pm.test(\"Response time is less than 2segundos\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_delete",
+			"value": "4302",
+			"type": "string"
+		},
+		{
+			"key": "id_update",
+			"value": "4248",
+			"type": "string"
+		},
+		{
+			"key": "id_post_busca",
+			"value": "2032",
+			"type": "string"
+		},
+		{
+			"key": "id_post_dele",
+			"value": "4247",
+			"type": "string"
+		},
+		{
+			"key": "id_comentario_busca",
+			"value": "2042",
+			"type": "string"
+		},
+		{
+			"key": "id_comment_delete",
+			"value": "2033",
+			"type": "string"
+		}
+	]
+}
